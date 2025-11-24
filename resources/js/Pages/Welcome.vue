@@ -30,15 +30,19 @@ defineProps({
                 v-if="$page.props.auth.user"
                 :href="route('dashboard')"
                 class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                >Dashboard</Link
-            >
+            >Dashboard</Link>
 
             <Link
                 v-if="$page.props.auth.user"
                 :href="route('project.index')"
                 class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                >Projects</Link
-            >
+            >Projects</Link>
+
+            <Link
+                v-if="$page.props.auth.user && $page.props.auth.user.is_admin"
+                :href="route('user.index')"
+                class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+            >Users</Link>
 
             <template v-else>
                 <Link

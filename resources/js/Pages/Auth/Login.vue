@@ -76,6 +76,10 @@ const submit = () => {
                 </label>
             </div>
 
+            <div class="block mt-4">
+                <InputError class="mt-2" :message="form.errors.account" />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <Link
                     v-if="canResetPassword"

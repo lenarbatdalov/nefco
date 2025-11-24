@@ -7,6 +7,7 @@ use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +18,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@nefco.ru',
+            'password' => Hash::make('password'),
+            'is_admin' => true,
+        ]);
+
         User::factory(10)->create();
 
         Project::factory()->count(10)->create([

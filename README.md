@@ -10,6 +10,8 @@ php artisan serve
 
 npm run dev
 ```
+http://localhost:8000<br>
+admin@nefco.ru / password
 
 # Использовал для выполнения
 - PHP 8.3
@@ -21,6 +23,8 @@ npm run dev
 - Tailwind
 
 # Скриншоты
-![2025-11-21_14-28.png](2025-11-21_14-28.png)
-![2025-11-21_14-33.png](2025-11-21_14-33.png)
-![2025-11-21_14-34.png](2025-11-21_14-34.png)
+![1](screenshots/account_blocked.png)
+![2](screenshots/user_management.png)
+![3](screenshots/2025-11-21_14-28.png)
+![4](screenshots/2025-11-21_14-33.png)
+![5](screenshots/2025-11-21_14-34.png)
